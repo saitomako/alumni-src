@@ -1,0 +1,60 @@
+body {
+	color: #333333;
+	background-color:#DFD7BF;
+}
+
+a, a:visited {
+	color: #0033FF;
+}
+a:hover {
+	color: #FF0000;
+}
+h2,h2  a,h2  a:hover,h2 a:visited,h3,h4,h5,h6{
+	color: #333333;
+}
+
+h1 {
+	color: #999999;
+}
+h2 a, h2 a:hover {
+	text-decoration: none;
+}
+
+
+h4 {
+	border-left-width: 6px;
+	border-left-style: solid;
+	border-left-color: #CCC9B8;
+}
+
+h5 {
+	background-image: url(../img/list.png);
+	background-repeat: no-repeat;
+	background-position: 2px 5px;
+}
+
+
+
+
+#footer, #footer a {
+	color: #666666;
+	text-decoration: none;
+}
+#menu1 li a, #menu2 li a, #menu3 li a, #menu4 li a, #menu5 li a, #menu6 li a, #menu7 li a, #menu8 li a, #menu9 li a, #menu10 li a,#newEntry li a {
+	color: #333333;
+}
+#menu li a:hover,#rmenu li a:hover {
+	background-color: #F4F1EA;
+}
+#menu   h4,#rmenu  h4 {
+	color: #A6A39C;
+
+	
+}
+.txt-colorback {
+	border-top-color: #CCC9B8;
+	border-right-color: #CCC9B8;
+	border-bottom-color: #CCC9B8;
+	border-left-color: #CCC9B8;
+	background-color: #FCFBF8;
+}

@@ -1,0 +1,83 @@
+*** oneword.js.0	Mon Sep 15 20:02:31 2008
+--- oneword.js	Sun Aug 14 15:04:38 2011
+***************
+*** 43,71 ****
+  }
+  
+  function load(e) {
+      var title = e.getAttribute("oneword");
+      var balloon = document.createElement("span");
+      balloon.className = "balloon";
+      balloon.style.display = "block";
+      balloon.style.position = "absolute";
+      balloon.style.bottom = "0px";
+!     text = document.createElement("span");
+      text.className = "text";
+      text.style.display = "block";
+!     text.innerHTML = title;
+!     balloon.appendChild(text);
+      var btm = document.createElement("b");
+      btm.className = "bottom";
+      btm.style.display = "block";
+!     balloon.appendChild(btm);
+!     e.balloon = balloon;
+      e.onmouseover = showbln;
+      e.onmouseout = hidebln;
+      e.onmousemove = move;
+  }
+  
+  function showbln(e) {
+      $("wedge").appendChild(this.balloon);
+  }
+  
+  function hidebln(e) {
+--- 43,91 ----
+  }
+  
+  function load(e) {
++     //吹き出し本文取得
+      var title = e.getAttribute("oneword");
++     //吹き出し本文をエスケープ
++     title = title.escapeHTML();
++     //エスケープされた絵文字イメージタグのみタグへ戻す
++     title = title.replace(/&lt;img\ssrc="img\/moji\/x_([0-9A-F][0-9A-F][0-9A-F][0-9A-F])\.gif"\salt="絵文字"((&gt;)|>)/gi, '<img src="img/moji/x_$1.gif" alt="絵文字">');
++     e.titles = title;
++ 
++     //吹き出し本体作成
+      var balloon = document.createElement("span");
+      balloon.className = "balloon";
+      balloon.style.display = "block";
+      balloon.style.position = "absolute";
+      balloon.style.bottom = "0px";
+!     e.balloon = balloon;
+! 
+!     //吹き出し上部を作成
+!     var text = document.createElement("span");
+      text.className = "text";
+      text.style.display = "block";
+!     e.texts = text;
+! 
+!     //吹き出し下部を作成
+      var btm = document.createElement("b");
+      btm.className = "bottom";
+      btm.style.display = "block";
+!     e.btms = btm;
+! 
+!     //イベントハンドラ設定
+      e.onmouseover = showbln;
+      e.onmouseout = hidebln;
+      e.onmousemove = move;
+  }
+  
+  function showbln(e) {
++     //吹き出し本体へ上部を追加
++     this.balloon.appendChild(this.texts);
++     //吹き出し本体へ下部を追加
++     this.balloon.appendChild(this.btms);
++     //吹き出しアンカーへ吹き出しを追加
+      $("wedge").appendChild(this.balloon);
++     //上部へ本文を流し込み
++     this.texts.innerHTML = this.titles;
+  }
+  
+  function hidebln(e) {

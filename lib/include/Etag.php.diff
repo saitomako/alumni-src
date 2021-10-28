@@ -1,0 +1,49 @@
+*** Etag.php.0	Mon Sep 15 18:21:27 2008
+--- Etag.php	Sun Aug 14 15:08:29 2011
+***************
+*** 8,13 ****
+--- 8,17 ----
+   * @access  public
+   * @version 1.0
+   */
++ 
++ 
++ //20091202 PHP5.3対応のため、eregをpreg_matchに変更
++ //KUNIHARU Tsujioka Usagi Project
+  class Etag
+  {
+      /**
+***************
+*** 46,52 ****
+          if (is_array($time)) {
+              $this->upd_time = 0;
+              foreach ($time as $t) {
+!                 if (ereg("^[0-9]{10}$", $t)) {
+                      $tmp = $t;
+                  } else {
+                      $tmp = $this->parse_http_date($t);
+--- 50,56 ----
+          if (is_array($time)) {
+              $this->upd_time = 0;
+              foreach ($time as $t) {
+!                 if (preg_match("/^[0-9]{10}$/", $t)) {
+                      $tmp = $t;
+                  } else {
+                      $tmp = $this->parse_http_date($t);
+***************
+*** 59,65 ****
+                  $this->upd_time = null;
+  
+          } elseif (strlen($time)) {
+!             if (ereg("^[0-9]{10}$", $time)) {
+                  $this->upd_time = $time;
+              } else {
+                  $tmp = $this->parse_http_date($time);
+--- 63,69 ----
+                  $this->upd_time = null;
+  
+          } elseif (strlen($time)) {
+!             if (preg_match("/^[0-9]{10}$/", $time)) {
+                  $this->upd_time = $time;
+              } else {
+                  $tmp = $this->parse_http_date($time);

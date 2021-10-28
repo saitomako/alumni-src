@@ -1,0 +1,22 @@
+*** login.class.php.0	Wed Feb 11 09:55:36 2009
+--- login.class.php	Sun Aug 14 15:44:57 2011
+***************
+*** 98,114 ****
+          if ($result) {
+              foreach ($result as $key=>$value) {
+                  $result[$key]['url'] = $this->getUrl($value['c_commu_topic_id'], 'pc', 'topic');
+-                 $topic_id = $result[$key]['c_commu_topic_id'];
+- 		$commu_id = $result[$key]['c_commu_id'];
+- 		$sql = "SELECT "
+- 			. "body "
+- 			. "FROM "
+- 				. MYNETS_PREFIX_NAME . "c_commu_topic_comment "
+- 			. "WHERE c_commu_id=$commu_id "
+- 			    . " AND c_commu_topic_id=$topic_id"
+- 				. " AND number=0";
+- 		$rs = db_get_row($sql);
+- 		$result[$key]['body'] = $rs['body'];
+              }
+          }
+          return $result;
+--- 98,103 ----

@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^(DoCoMo|KDDI|DDIPOKET|UP\.Browser|J-PHONE|Vodafone|SoftBank)
+RewriteCond URL !^/m/$ [NC]
+RewriteRule ^$ http://alumni.yorii-chu.org/help/m/ [R,L]
+RewriteCond %{HTTP_USER_AGENT} ^(DoCoMo|KDDI|DDIPOKET|UP\.Browser|J-PHONE|Vodafone|SoftBank)
+RewriteCond URL !^/m/(.+)$ [NC]
+RewriteRule ^([^/]+).html$ http://alumni.yorii-chu.org/help/m/$1.html [R,L]
+RewriteCond %{HTTP_USER_AGENT} ^(DoCoMo|KDDI|DDIPOKET|UP\.Browser|J-PHONE|Vodafone|SoftBank)
+RewriteCond URL !^/m/(.+)$ [NC]
+RewriteRule ^([^/]+)/([^/]+).html$ http://alumni.yorii-chu.org/help/m/$1/$2.html [R,L]
+RewriteCond %{HTTP_USER_AGENT} ^(DoCoMo|KDDI|DDIPOKET|UP\.Browser|J-PHONE|Vodafone|SoftBank)
+RewriteCond URL !^/m/(.+)$ [NC]
+RewriteRule ^([^/]+)/$ http://alumni.yorii-chu.org/help/m/$1/ [R,L]

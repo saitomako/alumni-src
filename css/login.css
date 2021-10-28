@@ -1,0 +1,449 @@
+/**
+* LICENSE
+*
+* This source file is subject to the new BSD license that is bundled
+* with this package in the file LICENSE.txt.
+*
+* @category
+* @package Session Class
+* @author なじらNET <mail@najiranet.jp>
+* @copyright Copyright (c) 2008 なじらNET <mail@najiranet.jp>
+* @copyright Copyright (c) 2006-2008 なじらNET (URL:http://www.najiranet.jp/)
+* @license New BSD License
+*/
+
+/* ヘッダー */
+body {
+   background:url(../images/login/bg.jpg) repeat-y top center #eaeaea;
+   color:#3a3a3a;
+   font:76% Verdana,Tahoma,Arial,sans-serif;
+   line-height:18px;
+   margin:0 auto;
+   padding:0;
+}
+#wrap {
+   background:#fff;
+   color:#303030;
+   margin:0 auto;
+   padding:1px 5px;
+   width:910px;
+}
+#header {
+   background:url(../images/login/front.jpg) no-repeat bottom center #fff;
+   color:#505050;
+   height:175px;
+   margin:0 0 10px;
+   padding:0;
+}
+#header h1 {
+   font-size:24px;
+   font-weight:bold;
+   letter-spacing:-2px;
+   margin:0px 0 15px 100px;
+   padding:45px 0 0;
+}
+#header h1 a,#header h1 a:hover {
+   font-weight:bold; padding:0;
+   color: yellow;
+}
+#header h1 a:hover {
+   color: orange;
+   text-decoration: none;
+}
+#header p {
+   font-size:12px;
+   letter-spacing:-1px;
+   margin:0 0 20px 100px;
+   padding:0 0 0 3px;
+   color: #fff;
+}
+/* ヘッダー ここまで*/
+
+/* 左メニュー */
+#left {
+   clear:left;
+   float:left;
+   margin:0 0 10px;
+   padding:0;
+   width:150px;
+}
+#left ul.menu {
+   list-style:none;
+   margin:0 0 18px;
+   padding:0;
+   width:150px;
+}
+#left ul.menu li {
+   display:inline;
+   padding:0;
+   width:150px;
+}
+#left ul.menu li a {
+   background:url(../images/login/menubg.gif) repeat-x bottom left #f4f4f4;
+   border-bottom:1px solid #d8d8d8;
+   border-left:4px solid #ccc;
+   border-right:1px solid #d8d8d8;
+   border-top:1px solid #d8d8d8;
+   color:#505050; float:left;
+   font-size:12px;
+   font-weight:bold;
+   margin-bottom:5px;
+   padding:5px 1px 5px 5px;
+   text-decoration:none;
+   width:138px;
+}
+#left ul.menu li a:hover,#leftside ul.menu li a.current {
+   background:url(../images/login/menubg2.gif) repeat-x bottom left #eaeaea;
+   border-bottom:1px solid #b0b0b0; 
+   border-left:4px solid #505050;
+   border-right:1px solid #b0b0b0;
+   border-top:1px solid #b0b0b0;
+   color:#505050;
+}
+#left ul.menu ul {
+   font-size:10px;
+   margin:0 0 0 15px;
+   padding:0 0 5px 0;
+   width:133px;
+}
+#left ul.menu ul a {
+   padding:3px 1px 3px 5px;
+   width:123px;
+}
+#left ul.menu ul ul {
+   font-size:10px;
+   width:120px;
+}
+#left ul.menu ul ul a {
+   width:108px;
+}
+#left h2 {
+   font-size:15px;
+   font-weight:bold;
+}
+#left .login {
+   background:url(../images/login/menubg.gif) repeat-x bottom left #f4f4f4;
+   border-bottom:1px solid #d8d8d8;
+   border-left:4px solid #ccc;
+   border-right:1px solid #d8d8d8;
+   border-top:1px solid #d8d8d8;
+   clear:left;
+   color:#505050;
+   line-height:15px;
+   margin:0 0 10px 0;
+   padding:5px 5px 5px;
+   width:134px;
+}
+
+#left .links {
+   background:url(../images/login/menubg.gif) repeat-x bottom left #f4f4f4;
+   border-bottom:1px solid #d8d8d8;
+   border-left:4px solid #ccc;
+   border-right:1px solid #d8d8d8;
+   border-top:1px solid #d8d8d8;
+   clear:left;
+   color:#505050;
+   line-height:15px;
+   margin:0 0 10px 0;
+   padding:5px 5px 5px;
+   width:134px;
+}
+
+#left .links ul {
+	list-style: none;
+	padding-left: 10px;
+}
+
+#left .links ul li {
+	margin-bottom: 8px;
+}
+
+#leftside p,.login p {
+   font-size:10px;
+}
+#left_banner{
+   text-align:center;
+}
+/* 左メニュー ここまで*/
+
+/* 右メニュー */
+#right {
+   float:right;
+   margin:0 0 0px;
+   width:180px;
+}
+#right_box {
+   background:url(../images/login/top.gif);
+   background-color: #f0f0f0;
+   padding:5px 5px 5px 5px;
+}
+#right p,#right ul {
+   font-size:10px;
+   margin:0 0 ;
+   padding:0;
+}
+#right li {
+   list-style-image: url(../images/login/bullet.gif);
+   background-color: #f4f4f4;
+   margin-left: 20px ;
+   padding:0;
+}
+#right h2 {
+   font-size:15px;
+   font-weight:bold;
+   margin:0 0 6px;
+   padding:5px 5px 5px 5px;
+}
+
+
+#right_bottom{ 
+height : 17px;
+width : 180px;
+float : left;
+display : inline;
+background-image : url(../images/login/bottom.gif);
+background-repeat : no-repeat;
+} 
+/* 右メニュー ここまで*/
+
+/* メイン */
+#main {
+   line-height:18px;
+   margin:10px 190px 10px 160px;
+   padding:5px 5px 5px 5px;
+   text-align:left;
+   border: 1px solid #eee;
+}
+#main h2 {
+   background : url(../images/login/main.gif) no-repeat;
+   height:40px;
+   width :500px;
+   font-size:15px;
+   font-weight:bold;
+   letter-spacing:-1px;
+   margin:8px 10px;
+   padding:10px 10px;
+}
+#main h3 {
+   font-size:15px;
+   font-weight:bold;
+   margin:6px 0;
+   margin-left: 15px;
+   padding:0;
+   text-decoration: underline;
+}
+#main p {
+   margin-left: 20px;
+}
+#main ul {
+   margin:0 0 16px 20px;
+   padding:0;
+}
+#main li {
+   margin:0 0 2px 5px;
+   padding:0 0 0 4px;
+}
+p.line {
+   margin-top: 5px;
+   border-bottom: 3px dotted #dadada;
+}
+#main .post-footer {
+    background-color: #fafafa;
+    padding: 5px; 
+    font-size: 95%;
+    border: 1px solid #eee;
+}
+#main .post-footer, .date {
+    background: url(../images/login/clock.gif) no-repeat 0 center;
+    padding-left: 20px; margin: 0 10px 0 5px;
+}
+#main .post-footer, .comments {
+    background: url(../images/login/comment.gif) no-repeat 0 center;
+    padding-left: 20px; margin: 0 10px 0 5px;
+}
+#main .post-footer, .readmore {
+    background: url(../images/login/page.gif) no-repeat 0 center;
+    padding-left: 20px; margin: 0 10px 0 5px;
+}
+
+#main h1 a{
+    color:#166090;
+    font-size:18px;
+    font-weight:bold;
+}
+#main h3 a{
+    color:green;
+}
+/* フッター */
+#footer {
+   background:#fff;
+   border-top:2px solid #dadada;
+   clear:both;
+   color:#666;
+   font-size:12px;
+   margin:0 auto;
+   padding:8px 0;
+   text-align:center;
+}
+#footer p {
+   text-align:center;
+   margin:0;
+   padding:0;
+}
+#footer a {
+   background:inherit;
+   color:#666;
+   font-weight:bold;
+   text-decoration:none;
+}
+#footer a:hover {
+   text-decoration:underline;
+}
+#footer span {
+   font-size:12px;
+}
+
+#powered_by {
+	padding-top: 17px;
+	float: right;
+	width: 200px;
+	height: 30px;
+	color: #000;
+	text-align: center;
+}
+
+#powered_by a {
+	color: #9595c2;
+}
+
+/*サイドバー*/
+
+#sidebar *{
+ border:none;
+ font-size: 12px;
+ text-decoration: none;
+ margin: 0px;
+ padding: 0px;
+ }
+#sidebar {
+ display: block;
+ margin: 0px;
+ height: auto;
+ width: 180px;
+ border: 1px solid #eee;
+}
+#sidebar h2 {
+ background-color: #E7E7E7;
+ background-position: center center;
+ margin: 5px;
+ padding: 5px;
+ text-align: center;
+}
+#sidebar li {
+ list-style-type: none;
+ margin: 5px;
+ padding: 0px;
+ border-bottom-width: 0px;
+ border-bottom-style: dotted;
+ border-bottom-color: #CCCCCC;
+ display: block;
+ background-color: #EFEFEF;
+}
+#sidebar p {
+ line-height: 15px;
+ margin-top: 5px;
+ margin-right: 5px;
+ margin-bottom: 10px;
+ margin-left: 5px;
+}
+
+/*サイドニュース*/
+
+#sidenews * {
+ border: none;
+ font-size: 12px;
+ text-decoration: none;
+ margin: 0px;
+ padding: 0px;
+ }
+#sidenews {
+ display: block;
+ margin: 0px;
+ height: auto;
+ width: 180px;
+ border: 1px solid #eee;
+}
+#sidenews h2 {
+ background-color: #C9C9C9;
+ background-position: center center;
+ margin: 5px;
+ padding: 5px;
+ text-align: center;
+}
+#sidenews p {
+ line-height: 15px;
+ margin-top: 5px;
+ margin-right: 5px;
+ margin-bottom: 5px;
+ margin-left: 5px;
+ background-color: #EFEFEF;
+}
+#sidenews img {
+ margin: 0px;
+ padding: 0px;
+ width:14px;
+ height:14px;
+}
+
+a {
+   color:#166090;
+   text-decoration:none;
+   font-weight:bold;
+}
+a:hover {
+   color:#000000;
+   text-decoration:underline;
+}
+a img {
+   border:0;
+}
+p {
+   margin:0 0 16px;
+}
+
+form {
+    margin:0;
+    padding: 0;
+}
+label {
+    display:block;
+    font-weight:bold;
+    margin:0 0;
+}
+input,textarea {
+   border:1px solid #ccc;
+   font-family:Verdana,Tahoma,Arial,Sans-Serif;
+   font-size:1em;
+   margin:0;
+   padding:5px;
+}
+input.button {
+    margin: 0;
+    font: bold 1em Arial, Sans-serif;
+    border: 1px solid #CCC;
+    padding: 2px 3px;
+    color: #333;
+    width:130px;
+}
+
+.login h2 {margin:0 0 10px; padding:0;}
+.textright {margin:0px 0 4px; text-align:right;}
+.center {text-align:center;}
+.red {color:red;}
+.green {color:green;}
+.blue {color:blue;}
+.button {background:url(../images/login/menubg.gif) repeat-x bottom left #f4f4f4; border-bottom:1px solid #d8d8d8; border-left:4px solid #ccc; border-right:1px solid #d8d8d8; border-top:1px solid #d8d8d8; color:#505050; font-weight:400; font-size:1.2em; margin:0 0 15px; padding:7px 7px 7px 11px; width:120px;}
+.left {float:left; margin:10px 10px 5px 0;}
+.right {float:right; margin:10px 0 5px 10px;}
+.check {width:30px;}
+

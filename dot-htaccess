@@ -1,0 +1,3 @@
+order deny,allow
+allow from .sitmnt01.ap.so-net.ne.jp
+deny from all

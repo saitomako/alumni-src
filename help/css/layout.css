@@ -1,0 +1,149 @@
+#header, #footer, #siteNavi  {
+	width: auto;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+h1 {
+	width: 760px;
+	text-indent: 20px;
+	background-image: url(../img/top.png);
+	padding-top: 10px;
+}
+
+
+
+
+h3{
+	margin-right: 14px;
+	margin-left: 14px;
+	margin-top: 14px;
+	margin-bottom: 0px;
+	width: auto;
+	line-height: 20px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:40px;
+	font-size: 16px;
+}
+#container {
+	width: 760px;
+}
+
+
+
+#header {
+	height: 155px;
+}
+
+#main{
+	width: 510px;
+	margin-right: 15px;
+	margin-left: auto;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	display: inline;
+	position: relative;
+	border: 1px solid #E1E1E1;
+}
+
+#menu{
+	width:200px;
+	margin-right: auto;
+	margin-left: 20px;
+	_margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu  h4,#rmenu h4 {
+	padding: 0px;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-size: 12px;
+	line-height: 26px;
+	background-image: url(../img/menutopic.jpg);
+	text-align: center;
+	text-indent: 0px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	border-bottom-style: none;
+
+}
+
+#space1, #space2 {
+	text-align: center;
+	margin:15px 0 15px 0;
+}
+
+#space3, #space4,#space5,#space6{
+	text-align:center;
+	margin:0 0 20px 0;
+}
+
+#menu1,#menu2,#menu3,#menu4,#menu5,#menu6,#menu7,#menu8,#menu9,#menu10,#newEntry{
+	width: 198px;
+	_width: 199px;
+	display: block;
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	list-style-type: none;
+	border: 1px solid #CCCCCC;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#menu1 li a, #menu2 li a,#menu3 li  a,#menu4  li a, #menu5 li a,#menu6 li  a,#menu7 li a, #menu8 li a,#menu9 li a,#menu10 li a,#newEntry li a{
+	margin-bottom: 1px;
+	list-style-type: disc;
+	margin-right: 10px;
+	_margin-top: -8px;
+	margin-left: 10px;
+	_margin-bottom: -8px;
+	text-decoration: none;
+	font-size: 12px;
+	background-image: url(../img/list.png);
+	background-repeat: no-repeat;
+	display: block;
+	background-position: 3px 5px;
+	padding-left: 20px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 2px;
+	position: relative;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCCCCC;
+	line-height: 16px;
+
+}
+
+#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #text10,#entrylist {
+	width: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+#siteNavi {
+	text-indent:20px;
+	line-height: 34px;
+}
+
